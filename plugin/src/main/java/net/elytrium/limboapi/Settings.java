@@ -31,7 +31,7 @@ public class Settings extends YamlConfig {
 
   @Comment({
       "Available serializers:",
-      "LEGACY_AMPERSAND - \"&c&lExample &c&9Text\".",
+      "LEGACY_AMP&lExample &c&9Text\".",
       "LEGACY_SECTION - \"§c§lExample §c§9Text\".",
       "MINIMESSAGE - \"<bold><red>Example</red> <blue>Text</blue></bold>\". (https://webui.adventure.kyori.net/)",
       "GSON - \"[{\"text\":\"Example\",\"bold\":true,\"color\":\"red\"},{\"text\":\" \",\"bold\":true},{\"text\":\"Text\",\"bold\":true,\"color\":\"blue\"}]\". (https://minecraft.tools/en/json_text.php/)",
@@ -47,6 +47,9 @@ public class Settings extends YamlConfig {
   public static class MAIN {
 
     public boolean CHECK_FOR_UPDATES = true;
+
+    @Comment("The brand name to be displayed in F3")
+    public String BRAND_NAME = "LimboAPI";
 
     public int MAX_CHAT_MESSAGE_LENGTH = 256;
     public int MAX_BRAND_NAME_LENGTH = 64;
